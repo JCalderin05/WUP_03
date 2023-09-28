@@ -23,27 +23,43 @@ $H_0$ There is no difference in the alcohol consumed based on what row you sit i
 $H_A$ There is a difference in the alcohol consumed based on what row you sit in
 
 
-## Now with ggplot - first select the basic data
+### Methods
 
-```{r}
-basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
-```
-## Now add in boxplot
+Alcohol is a numerical variable, while seats are categorical variables. This means we use the Numerical~Cat helper file.
 
-```{r}
-basicCN + geom_boxplot()
-```
-  
-  
-### get fancy  
+### Results
+
+
+### Graphical Results
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
-## Numerical Summarys 
+  
+  
+
+### Numerical Summarys 
+
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+
 
 ## Inferential Tests
+
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+The P value is 0.000116 which is less than 0.05. This means we reject the null hypothesis. This means we can conclude that there is a difference in alcohol consumed based on the row that was sat in.
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+We have no evidence that there is a difference in the alcohol consumption between the middle and front rows. The only difference we found was that the back row drinks more than the middle and front rows. 
 
 ## Conclusions
 
