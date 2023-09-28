@@ -29,14 +29,14 @@ Alcohol is a numerical variable, while seats are categorical variables. This mea
 
 ### Results
 
-
 ### Graphical Results
 
 ```{r}
-basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
+boxplot(alcohol~Seat,data=davisdata)
 ```
 
-  
+ 
+ The box plot shows a substantial difference in the alcohol consumed among the 3 rows. The back row consumes the most, while the front and middle row does not consume much at all. 
   
 
 ### Numerical Summarys 
