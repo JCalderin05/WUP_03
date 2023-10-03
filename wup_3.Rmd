@@ -14,7 +14,7 @@ require(tidyverse)
 require(tigerstats)
 davisdata <- read.csv(file="UCDavis.csv")
 ```
-## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row you choose to sit in??
+### Our Goal is to answer this question: Is there a difference in the alcohol consumed based on the row you choose to sit in??
 
 # Introduction
 
@@ -64,4 +64,5 @@ We have no evidence that there is a difference in the alcohol consumption betwee
 
 ## Conclusions
 
+The original question was if there was a difference in alcohol consumed based on the row you sit in? Our graphical and numerical results tells us that the back row consumes the most alcohol, while the front and middle row consume very little. We also rejected the null hypothesis because the P value was 0.000116; which is less than 0.05. Since we rejected the null hypothesis, we can conclude that there is a difference in the alcohol consumed based on the row you sit in. 
 
