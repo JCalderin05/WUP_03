@@ -36,15 +36,16 @@ boxplot(alcohol~Seat,data=davisdata)
 ```
 
  
- The box plot shows a substantial difference in the alcohol consumed among the 3 rows. The back row consumes the most, while the front and middle row does not consume much at all. 
+The box plot shows a substantial difference in the alcohol consumed among the 3 rows. The back row consumes the most, while the front and middle row does not consume much at all. 
   
 
-### Numerical Summarys 
+### Numerical Results 
 
 ```{r}
 favstats(alcohol~Seat,data=davisdata)
 ```
 
+The results for Q3 shows us that there is not a big difference of alcohol consumed in the front and middle row. However, there is a big difference in the amount of alcohol consumed in the back row according to Q3. This helps us conclude that the back row consumes more alcohol than the front and middle row. 
 
 ## Inferential Tests
 
